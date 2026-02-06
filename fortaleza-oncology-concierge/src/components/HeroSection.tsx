@@ -8,16 +8,21 @@ export default function HeroSection() {
 
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <iframe
           className="h-full w-full object-cover"
-        >
-          <source src="/videos/testimonial-placeholder.mp4" type="video/mp4" />
-          {/* Fallback gradient background */}
-        </video>
+          src="https://www.youtube.com/embed/itpxZudlkJo?autoplay=1&mute=1&loop=1&playlist=itpxZudlkJo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Patient Testimonial"
+          allow="autoplay; encrypted-media"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '100vh',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none',
+          }}
+        />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       </div>
