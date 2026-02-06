@@ -10,6 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom Color Palette for Oncology Concierge */
+  --color-primary: #005f73;
+  --color-healing: #94d2bd;
+  --color-coral-cta: #ee9b00;
 }
 
 @media (prefers-color-scheme: dark) {
