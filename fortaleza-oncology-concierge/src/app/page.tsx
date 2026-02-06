@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import PricingTable from '@/components/PricingTable';
 import TestimonialSection from '@/components/TestimonialSection';
+import TechnologySection from '@/components/TechnologySection';
 import ServicesGrid from '@/components/ServicesGrid';
 import BookingSection from '@/components/BookingSection';
 
@@ -20,6 +21,9 @@ export default function Home() {
         </div>
         <div id="testimonial">
           <TestimonialSection />
+        </div>
+        <div id="technology">
+          <TechnologySection />
         </div>
         <div id="services">
           <ServicesGrid />
