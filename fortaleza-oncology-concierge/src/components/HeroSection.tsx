@@ -76,34 +76,43 @@ export default function HeroSection() {
           className="absolute bottom-12 left-1/2 w-full max-w-4xl -translate-x-1/2"
         >
           <div className="rounded-2xl bg-white/95 px-8 py-6 shadow-2xl backdrop-blur-sm">
-            <p className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-600">
-              Non-Negotiable Trust Signals
-            </p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              {/* JCI Accreditation Logo Placeholder */}
+              {/* JCI Accreditation Logo */}
               <div className="flex flex-col items-center">
-                <div className="flex h-20 w-32 items-center justify-center rounded-lg bg-gray-100 text-xs font-semibold text-gray-500">
-                  JCI Logo
+                <div className="flex h-20 w-32 items-center justify-center">
+                  <img
+                    src="/logos/jci-logo.png"
+                    alt="JCI Accreditation"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <span className="mt-2 text-xs text-gray-600">
                   JCI Accreditation
                 </span>
               </div>
 
-              {/* Planetree Designation Logo Placeholder */}
+              {/* Planetree Designation Logo */}
               <div className="flex flex-col items-center">
-                <div className="flex h-20 w-32 items-center justify-center rounded-lg bg-gray-100 text-xs font-semibold text-gray-500">
-                  Planetree Logo
+                <div className="flex h-20 w-32 items-center justify-center">
+                  <img
+                    src="/logos/planetree-logo.png"
+                    alt="Planetree Designation"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <span className="mt-2 text-xs text-gray-600">
                   Planetree Designation
                 </span>
               </div>
 
-              {/* Newsweek Logo Placeholder */}
+              {/* Newsweek Logo */}
               <div className="flex flex-col items-center">
-                <div className="flex h-20 w-32 items-center justify-center rounded-lg bg-gray-100 text-xs font-semibold text-gray-500">
-                  Newsweek Logo
+                <div className="flex h-20 w-32 items-center justify-center">
+                  <img
+                    src="/logos/newsweek-logo.png"
+                    alt="World's Best Hospitals"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <span className="mt-2 text-xs text-gray-600">
                   World's Best Hospitals
