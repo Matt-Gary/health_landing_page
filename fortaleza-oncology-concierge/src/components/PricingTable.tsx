@@ -91,33 +91,33 @@ export default function PricingTable() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mb-12 overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 to-healing/10 p-8 shadow-lg"
+                    className="mb-12 overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-healing/10 p-4 shadow-lg sm:rounded-2xl sm:p-6 md:p-8"
                 >
-                    <h3 className="mb-6 text-center text-2xl font-bold text-primary">
+                    <h3 className="mb-4 text-center text-xl font-bold text-primary sm:mb-6 sm:text-2xl">
                         Calculate Your Potential Savings
                     </h3>
 
                     {/* Procedure Selector */}
-                    <div className="mb-8">
-                        <label className="mb-3 block text-sm font-semibold text-gray-700">
+                    <div className="mb-6 sm:mb-8">
+                        <label className="mb-2 block text-xs font-semibold text-gray-700 sm:mb-3 sm:text-sm">
                             Select Procedures (choose one or more):
                         </label>
-                        <div className="space-y-3">
+                        <div className="space-y-2 sm:space-y-3">
                             {pricingData.map((item) => (
                                 <label
                                     key={item.procedure}
-                                    className="flex cursor-pointer items-center rounded-lg border-2 border-primary/20 bg-white p-4 transition-all hover:border-primary hover:bg-primary/5"
+                                    className="flex cursor-pointer items-center rounded-lg border-2 border-primary/20 bg-white p-3 transition-all hover:border-primary hover:bg-primary/5 sm:p-4"
                                 >
                                     <input
                                         type="checkbox"
                                         checked={selectedProcedures.includes(item.procedure)}
                                         onChange={() => toggleProcedure(item.procedure)}
-                                        className="h-5 w-5 cursor-pointer rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary"
+                                        className="h-4 w-4 flex-shrink-0 cursor-pointer rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary sm:h-5 sm:w-5"
                                     />
-                                    <span className="ml-3 flex-1 text-base font-medium text-gray-900">
+                                    <span className="ml-2 flex-1 text-sm font-medium text-gray-900 sm:ml-3 sm:text-base">
                                         {item.procedure}
                                     </span>
-                                    <span className="text-sm text-gray-600">
+                                    <span className="ml-2 text-xs text-gray-600 sm:text-sm">
                                         {item.brazilCost}
                                     </span>
                                 </label>
