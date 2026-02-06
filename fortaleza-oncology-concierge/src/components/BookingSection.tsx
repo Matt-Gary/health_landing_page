@@ -33,10 +33,15 @@ export default function BookingSection() {
                 >
                     <div className="min-h-[700px]">
                         <InlineWidget
-                            url="https://calendly.com/your-calendly-username"
+                            url="https://calendly.com/m-garczynski91"
                             styles={{
                                 height: '700px',
                                 width: '100%',
+                            }}
+                            pageSettings={{
+                                primaryColor: '005f73',
+                                textColor: '4d5055',
+                                backgroundColor: 'ffffff',
                             }}
                         />
                     </div>
