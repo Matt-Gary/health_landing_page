@@ -50,6 +50,18 @@ export default function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const element = document.getElementById('booking');
+              if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth',
+                });
+              }
+            }}
             className="rounded-full bg-coral-cta px-10 py-4 text-lg font-semibold text-white shadow-2xl transition-shadow hover:shadow-coral-cta/50 md:text-xl"
           >
             Request a Personalized Care Itinerary

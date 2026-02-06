@@ -1,7 +1,10 @@
+'use client';
+
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import PricingTable from '@/components/PricingTable';
 import ServicesGrid from '@/components/ServicesGrid';
+import BookingSection from '@/components/BookingSection';
 
 export default function Home() {
   return (
@@ -17,6 +20,9 @@ export default function Home() {
         <div id="services">
           <ServicesGrid />
         </div>
+        <div id="booking">
+          <BookingSection />
+        </div>
         {/* Contact section placeholder */}
         <div id="contact" className="bg-primary px-4 py-20">
           <div className="mx-auto max-w-4xl text-center">
@@ -26,7 +32,21 @@ export default function Home() {
             <p className="mb-8 text-xl text-white/90">
               Contact us today to schedule your personalized care consultation
             </p>
-            <button className="rounded-full bg-coral-cta px-10 py-4 text-lg font-semibold text-white shadow-2xl transition-all hover:scale-105">
+            <button
+              onClick={() => {
+                const element = document.getElementById('booking');
+                if (element) {
+                  const offset = 80;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - offset;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth',
+                  });
+                }
+              }}
+              className="rounded-full bg-coral-cta px-10 py-4 text-lg font-semibold text-white shadow-2xl transition-all hover:scale-105"
+            >
               Request Consultation
             </button>
           </div>

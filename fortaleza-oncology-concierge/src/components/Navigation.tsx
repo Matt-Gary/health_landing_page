@@ -19,10 +19,11 @@ export default function Navigation() {
         { label: 'Home', href: '#home' },
         { label: 'Pricing', href: '#pricing' },
         { label: 'Services', href: '#services' },
+        { label: 'Book Now', href: '#booking' },
         { label: 'Contact', href: '#contact' },
     ];
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
         e.preventDefault();
         const targetId = href.replace('#', '');
         const element = document.getElementById(targetId);
@@ -45,8 +46,8 @@ export default function Navigation() {
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
             className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white/95 shadow-lg backdrop-blur-md'
-                    : 'bg-white/80 backdrop-blur-sm'
+                ? 'bg-white/95 shadow-lg backdrop-blur-md'
+                : 'bg-white/80 backdrop-blur-sm'
                 }`}
         >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -90,6 +91,7 @@ export default function Navigation() {
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={(e) => scrollToSection(e, '#booking')}
                         className="hidden rounded-full bg-coral-cta px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-shadow hover:shadow-lg md:block"
                     >
                         Get Started
