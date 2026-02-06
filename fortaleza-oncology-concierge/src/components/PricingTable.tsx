@@ -53,9 +53,11 @@ export default function PricingTable() {
 
     const calculateSavings = () => {
         const selectedData = pricingData.filter(p => selectedProcedures.includes(p.procedure));
+        const flightCost = 800;
 
         const usaTotal = selectedData.reduce((sum, p) => sum + (p.usaMin + p.usaMax) / 2, 0);
-        const brazilTotal = selectedData.reduce((sum, p) => sum + (p.brazilMin + p.brazilMax) / 2, 0);
+        const brazilMedicalTotal = selectedData.reduce((sum, p) => sum + (p.brazilMin + p.brazilMax) / 2, 0);
+        const brazilTotal = brazilMedicalTotal + flightCost;
         const savings = usaTotal - brazilTotal;
         const savingsPercent = usaTotal > 0 ? ((savings / usaTotal) * 100).toFixed(0) : '0';
 
@@ -160,11 +162,9 @@ export default function PricingTable() {
                             <p className="text-3xl font-bold text-primary">
                                 ${brazilTotal.toLocaleString()}
                             </p>
-                            {selectedProcedures.length > 1 && (
-                                <p className="mt-1 text-xs text-gray-500">
-                                    {selectedProcedures.length} procedures
-                                </p>
-                            )}
+                            <p className="mt-1 text-xs text-gray-500">
+                                + flight (New York) included
+                            </p>
                         </motion.div>
 
                         {/* Savings */}
@@ -183,6 +183,9 @@ export default function PricingTable() {
                             </p>
                             <p className="mt-1 text-lg font-semibold text-primary">
                                 ({savingsPercent}% less)
+                            </p>
+                            <p className="mt-1 text-xs font-medium text-primary/80">
+                                + flights included
                             </p>
                         </motion.div>
                     </div>
