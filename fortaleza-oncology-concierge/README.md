@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 Fortaleza Oncology Concierge
 
-## Getting Started
+**🌐 Live Project:** [health-landing-page-gilt.vercel.app](https://health-landing-page-gilt.vercel.app/)
 
-First, run the development server:
+Welcome to the **Fortaleza Oncology Concierge** landing page repository. This project is a modern, responsive, and performance-optimized single-page web application designed to offer premium, personalized oncology care services in Fortaleza.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+As a high-fidelity frontend application built with the latest React ecosystem technologies, it showcases a clean architecture, sophisticated animated UI elements, and a seamless client booking experience.
+
+## ✨ Key Features & Functionalities
+
+- **Smooth Animated Navigation**: A fully responsive navigation bar with modern UI concepts and smooth scrolling anchors.
+- **Engaging Hero Section**: Dynamic entry point with impactful copy and structured layout powered by Framer Motion animations.
+- **Service & Technology Showcases**: Reusable and scalable grid components displaying specific oncology treatments and cutting-edge operational technology.
+- **Patient Testimonials**: Clean review sections prioritizing social proof and user trust.
+- **Transparent Pricing Components**: Clear, tiered service plans formatted for easy readability.
+- **Integrated Appointment Booking**: Seamless implementation of `react-calendly` allowing direct consultation scheduling without leaving the platform.
+- **Optimized User Experience**: Smooth scroll behavior, responsive cross-device layout mapping, and optimized component rendering.
+
+## 🛠️ Technology Stack
+
+This project was built with a keen focus on modern development standards:
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Integrations:** Calendly API (via `react-calendly`)
+
+## 🏗️ Project Architecture
+
+The architecture relies on a highly modular component-driven design:
+
+```text
+src/
+├── app/                  # Next.js app router configuration
+│   ├── layout.tsx        # Global layout and metadata
+│   ├── page.tsx          # Main single-page orchestration
+│   └── globals.css       # Global Tailwind integrations
+├── components/           # Reusable, self-contained UI modules
+│   ├── Navigation.tsx
+│   ├── HeroSection.tsx
+│   ├── PricingTable.tsx
+│   ├── TestimonialSection.tsx
+│   ├── TechnologySection.tsx
+│   ├── ServicesGrid.tsx
+│   └── BookingSection.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you'd like to run this application locally to review the code in action:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone <repository-url>
+   cd fortaleza-oncology-concierge
+   ```
 
-## Learn More
+2. **Install the dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Note for Technical Recruiters
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This repository demonstrates my capability to convert business requirements into a scalable frontend web application. Specifically, it highlights:
 
-## Deploy on Vercel
+- **Proficiency with Context and Hydration in Next.js 16+**, utilizing `'use client'` correctly for client-side interactivity (such as Framer Motion animations and smooth scrolling).
+- **Component-Driven Architecture**, ensuring readability, maintainability, and reusability over time by breaking down complex pages into distinct blocks.
+- **Modern CSS Practices**, utilizing Tailwind CSS v4 to rapidly prototype and apply polished responsive designs without compromising performance.
+- **Ecosystem Tooling Mastery**, seamlessly integrating TypeScript for type-safe components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Thank you for reviewing my code! If you have any questions about my technical choices, feel free to reach out.*
